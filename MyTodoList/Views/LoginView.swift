@@ -37,10 +37,12 @@ struct LoginView: View {
                     .padding(.horizontal)
                     .frame(height: 55)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black))
+                    .accessibilityIdentifier("loginUsernameTextFieldId")
                 SecureField("Password", text: $loginViewModel.password)
                     .padding(.horizontal)
                     .frame(height: 55)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black))
+                    .accessibilityIdentifier("loginPasswordTextFieldId")
             }
             .padding(15)
             
@@ -53,10 +55,12 @@ struct LoginView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color.accentColor)
                         .cornerRadius(10)
+                        .accessibilityIdentifier("loginLoginButtonId")
                 }
                 Button(action: createAccountButtonPressed) {
                     Text("Create account")
                         .bold()
+                        .accessibilityIdentifier(AccessibilityID.Login.createAccount)
                 }
             }
             .padding(15)
