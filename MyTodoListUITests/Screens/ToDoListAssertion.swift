@@ -16,6 +16,7 @@ class ToDoListAsertion: BaseScreen {
     }
     
     func assertLoginError() -> Bool {
+        _ = headline.waitForExistence(timeout: 5)
         return errorPopUpHeadline.exists
     }
 }
